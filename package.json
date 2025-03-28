@@ -1,0 +1,29 @@
+{
+  "name": "tp02",
+  "version": "1.0.0",
+  "description": "tp 2 szw y gar",
+  "homepage": "https://github.com/michellegarber/TP2DAI#readme",
+  "bugs": {
+    "url": "https://github.com/michellegarber/TP2DAI/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michellegarber/TP2DAI.git"
+  },
+  "license": "ISC",
+  "author": "szwarcbort garber",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": ".",
+    "ej01": "node src/ej01.js",
+    "ej02": "node src/ej02.js",
+    "ej03": "node src/ej03.js",
+    "ej04": "node src/ej04.js",
+    "ej05": "node src/ej05.js",
+    "ej06": "node src/ej06.js",
+    "ej07": "node src/ej07.js",
+    "ej08": "node src/ej08.js"
+
+  }
+}
