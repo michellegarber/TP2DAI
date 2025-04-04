@@ -1,5 +1,6 @@
 import axios from "axios";
 const APIKEY = "3aec7103";
+const DIEZ = 10;
 
 
 const OMDBSearchByPage = async (searchText, page = 1) => {
@@ -44,6 +45,26 @@ const OMDBSearchComplete = async (searchText) => {
 
   try {
   
+
+    resultados = await OMDBSearchByPage(searchText, 1)
+    if(resultados.cantidadTotal <= DIEZ)
+    {
+      resultados;
+      
+    } else {
+      let num = Math.ceil(resultados.cantidadTotal/DIEZ);
+      for(i=2; i<num; i++){
+
+        resultadoTemporal = await OMDBSearchByPage(searchText, i)
+        resultados.datos.concat(resultadoTemporal.datos);
+      }
+
+      
+    }
+          
+
+
+
     const response = await axios.get("https://www.omdbapi.com/", {
       params: {
         s: searchText,  
