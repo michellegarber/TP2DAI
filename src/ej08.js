@@ -1,9 +1,13 @@
 
 import { OMDBSearchByPage, OMDBSearchComplete, OMDBGetByImdbID } from './modules/omdb-wrapper.js';
 
-// Ejemplo de uso
 const buscarPeliculas = async () => {
   const result = await OMDBSearchByPage('Inception', 1);
+  console.log(result);
+};
+
+const buscarPeliCompleta = async () => {
+  const result = await OMDBSearchComplete('Cars');
   console.log(result);
 };
 
@@ -14,6 +18,7 @@ const obtenerDetalles = async () => {
 
 buscarPeliculas();
 obtenerDetalles();
+buscarPeliCompleta();
 
 
 
